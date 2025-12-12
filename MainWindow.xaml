@@ -14,7 +14,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Título con icono -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,15">
             <TextBlock Text="🏙️" FontSize="24" VerticalAlignment="Center" Margin="0,0,10,0"/>
             <Label Content="Actividades por Ciudad" 
@@ -31,7 +30,6 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Panel de Ciudades -->
             <Border Grid.Column="0" 
                     BorderBrush="SteelBlue" 
                     BorderThickness="2" 
@@ -112,7 +110,6 @@
                 </StackPanel>
             </Border>
 
-            <!-- Panel de Actividades Asociadas -->
             <Border Grid.Column="1" 
                     BorderBrush="Orange" 
                     BorderThickness="2" 
@@ -155,7 +152,6 @@
                 </StackPanel>
             </Border>
 
-            <!-- Panel de Todas las Actividades con Filtros -->
             <Border Grid.Column="2" 
                     BorderBrush="Green" 
                     BorderThickness="2" 
@@ -168,7 +164,6 @@
                         <Label Content="TODAS LAS ACTIVIDADES" Foreground="DarkGreen" FontWeight="Bold" FontSize="14"/>
                     </StackPanel>
                     
-                    <!-- Filtros y Búsqueda -->
                     <Label Content="Buscar:" FontSize="13" FontWeight="SemiBold"/>
                     <TextBox x:Name="txtBusqueda" 
                              Height="28"

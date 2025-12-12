@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Services"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\Services\\DatabaseService.cs",
   "PreviewInSolutionExplorer": false
 }

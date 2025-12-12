@@ -25,14 +25,12 @@ public partial class MainWindow : Window
     {
         try
         {
-            // Usar la misma ruta que DatabaseService (raíz del proyecto)
             string exeDir = AppDomain.CurrentDomain.BaseDirectory;
             string dbPath;
             
             if (exeDir.Contains("bin") && (exeDir.Contains("Debug") || exeDir.Contains("Release")))
             {
                 var dir = new DirectoryInfo(exeDir);
-                // Subir 3 niveles hasta la raíz del proyecto
                 for (int i = 0; i < 3 && dir.Parent != null; i++)
                 {
                     dir = dir.Parent;
@@ -73,7 +71,6 @@ public partial class MainWindow : Window
             ", conn);
             cmd.ExecuteNonQuery();
 
-            // Migrar tablas existentes si no tienen los nuevos campos
             try
             {
                 using var alterCmd = new SqliteCommand(@"
@@ -83,7 +80,7 @@ public partial class MainWindow : Window
                 ", conn);
                 alterCmd.ExecuteNonQuery();
             }
-            catch { } // Ignorar si las columnas ya existen
+            catch { }
 
             try
             {
@@ -95,7 +92,7 @@ public partial class MainWindow : Window
                 ", conn);
                 alterCmd2.ExecuteNonQuery();
             }
-            catch { } // Ignorar si las columnas ya existen
+            catch { }
 
             using var countCmd = new SqliteCommand("SELECT COUNT(*) FROM ciudad", conn);
             if (Convert.ToInt64(countCmd.ExecuteScalar()) == 0)
@@ -192,7 +189,6 @@ public partial class MainWindow : Window
             txtPrecio.Text = row["precio"]?.ToString() ?? string.Empty;
             txtDuracion.Text = row["duracion"]?.ToString() ?? string.Empty;
             
-            // Seleccionar tipo en ComboBox
             string? tipo = row["tipo"]?.ToString();
             foreach (ComboBoxItem item in cmbTipo.Items)
             {
@@ -203,7 +199,6 @@ public partial class MainWindow : Window
                 }
             }
             
-            // Seleccionar estado en ComboBox
             string? estado = row["estado"]?.ToString();
             foreach (ComboBoxItem item in cmbEstado.Items)
             {
@@ -388,15 +383,12 @@ public partial class MainWindow : Window
                 ("@estado", estado ?? (object)DBNull.Value)
             );
             
-            // Limpiar filtros y recargar actividades
             if (txtBusqueda != null) txtBusqueda.Clear();
-            if (cmbFiltroTipo != null) cmbFiltroTipo.SelectedIndex = 0; // "Todos"
-            if (cmbFiltroEstado != null) cmbFiltroEstado.SelectedIndex = 0; // "Todos"
+            if (cmbFiltroTipo != null) cmbFiltroTipo.SelectedIndex = 0;
+            if (cmbFiltroEstado != null) cmbFiltroEstado.SelectedIndex = 0;
             
-            // Recargar actividades (sin filtros)
             CargarActividades();
             
-            // Limpiar campos
             txtActividad.Clear();
             txtPrecio.Clear();
             txtDuracion.Clear();
@@ -453,7 +445,6 @@ public partial class MainWindow : Window
                 ("@id", actividadId)
             );
 
-            // Aplicar filtros actuales para reflejar cambios
             AplicarFiltros();
             ActualizarEstado($"Actividad '{nombreAnterior}' actualizada a '{txtActividad.Text.Trim()}'");
             MessageBox.Show("Actividad actualizada correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -492,17 +483,14 @@ public partial class MainWindow : Window
                 ("@id", actividadId)
             );
 
-            // Aplicar filtros actuales después de eliminar
             AplicarFiltros();
             
-            // Limpiar campos
             txtActividad.Clear();
             txtPrecio.Clear();
             txtDuracion.Clear();
             if (cmbTipo != null) cmbTipo.SelectedIndex = -1;
             if (cmbEstado != null) cmbEstado.SelectedIndex = -1;
             
-            // Actualizar actividades asociadas si hay ciudad seleccionada
             if (ListaCiudades.SelectedValue != null)
             {
                 int ciudadId = Convert.ToInt32(ListaCiudades.SelectedValue);
@@ -589,7 +577,6 @@ public partial class MainWindow : Window
         }
     }
 
-    // Métodos para filtros y búsqueda
     private void txtBusqueda_TextChanged(object sender, TextChangedEventArgs e)
     {
         if (ListaActividades != null && txtBusqueda != null)
@@ -610,31 +597,24 @@ public partial class MainWindow : Window
 
     private void AplicarFiltros()
     {
-        // Validar que los controles estén inicializados
         if (ListaActividades == null || txtBusqueda == null || cmbFiltroTipo == null || cmbFiltroEstado == null)
             return;
 
         try
         {
-            // Obtener todas las actividades
             DataTable todasActividades = db.ObtenerActividades();
-            
-            // Crear una copia para filtrar
             DataTable resultado = todasActividades.Clone();
             
-            // Obtener valores de filtros
             string busqueda = txtBusqueda.Text?.Trim() ?? string.Empty;
             string tipoFiltro = (cmbFiltroTipo.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Todos";
             string estadoFiltro = (cmbFiltroEstado.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Todos";
 
-            // Filtrar fila por fila
             foreach (DataRow row in todasActividades.Rows)
             {
                 bool cumpleBusqueda = true;
                 bool cumpleTipo = true;
                 bool cumpleEstado = true;
 
-                // Aplicar búsqueda
                 if (!string.IsNullOrWhiteSpace(busqueda))
                 {
                     string busquedaLower = busqueda.ToLower();
@@ -647,42 +627,34 @@ public partial class MainWindow : Window
                                     estado.Contains(busquedaLower);
                 }
 
-                // Aplicar filtro por tipo
                 if (tipoFiltro != "Todos")
                 {
                     string tipoRow = row["tipo"]?.ToString() ?? "";
                     cumpleTipo = tipoRow == tipoFiltro;
                 }
 
-                // Aplicar filtro por estado
                 if (estadoFiltro != "Todos")
                 {
                     string estadoRow = row["estado"]?.ToString() ?? "";
                     cumpleEstado = estadoRow == estadoFiltro;
                 }
 
-                // Si cumple todos los filtros, agregar a resultado
                 if (cumpleBusqueda && cumpleTipo && cumpleEstado)
                 {
                     resultado.ImportRow(row);
                 }
             }
 
-            // Mostrar resultado
             ListaActividades.ItemsSource = resultado.DefaultView;
         }
         catch (Exception ex)
         {
-            // Si hay error, mostrar todas las actividades
             MessageBox.Show($"Error al aplicar filtros: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             try
             {
                 CargarActividades();
             }
-            catch
-            {
-                // Ignorar errores secundarios
-            }
+            catch { }
         }
     }
 }
