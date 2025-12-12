@@ -1,0 +1,300 @@
+﻿<Window x:Class="ActividadesCiudad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ActividadesCiudad"
+        mc:Ignorable="d"
+        Title="Actividades por Ciudad" Height="750" Width="1200">
+    
+    <Grid Margin="15" Background="#F5F5F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Título con icono -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,15">
+            <TextBlock Text="🏙️" FontSize="24" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <Label Content="Actividades por Ciudad" 
+                   FontSize="20" 
+                   FontWeight="Bold" 
+                   Foreground="DarkBlue"
+                   VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Panel de Ciudades -->
+            <Border Grid.Column="0" 
+                    BorderBrush="SteelBlue" 
+                    BorderThickness="2" 
+                    Background="LightBlue"
+                    Padding="10" 
+                    Margin="5">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <TextBlock Text="📍" FontSize="16" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                        <Label Content="CIUDADES" Foreground="DarkBlue" FontWeight="Bold" FontSize="14"/>
+                    </StackPanel>
+                    
+                    <ListBox x:Name="ListaCiudades"
+                             SelectionChanged="ListaCiudades_SelectionChanged"
+                             DisplayMemberPath="nombre"
+                             SelectedValuePath="id"
+                             Height="180"
+                             Margin="0,5,0,10"
+                             ToolTip="Selecciona una ciudad para ver sus actividades"/>
+                    
+                    <Label Content="Nombre:" FontSize="13"/>
+                    <TextBox x:Name="txtCiudad" 
+                             Height="28"
+                             FontSize="13"
+                             Margin="0,3,0,5"
+                             ToolTip="Ingresa el nombre de la ciudad"/>
+                    
+                    <Label Content="Población:" FontSize="13"/>
+                    <TextBox x:Name="txtPoblacion" 
+                             Height="28"
+                             FontSize="13"
+                             Margin="0,3,0,5"
+                             ToolTip="Ingresa la población (número entero)"/>
+                    
+                    <Label Content="País:" FontSize="13"/>
+                    <TextBox x:Name="txtPais" 
+                             Height="28"
+                             FontSize="13"
+                             Margin="0,3,0,5"
+                             ToolTip="Ingresa el país"/>
+                    
+                    <Label Content="Fecha de Fundación:" FontSize="13"/>
+                    <TextBox x:Name="txtFechaFundacion" 
+                             Height="28"
+                             FontSize="13"
+                             Margin="0,3,0,10"
+                             ToolTip="Ingresa la fecha de fundación"/>
+                    
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0">
+                        <Button Content="Crear" 
+                                Click="AgregarCiudad_Click"
+                                Background="Green"
+                                Foreground="White"
+                                Width="85"
+                                Height="32"
+                                FontSize="13"
+                                Margin="3"
+                                ToolTip="Crear una nueva ciudad"/>
+                        <Button Content="Actualizar" 
+                                Click="ActualizarCiudad_Click"
+                                Background="Blue"
+                                Foreground="White"
+                                Width="85"
+                                Height="32"
+                                FontSize="13"
+                                Margin="3"
+                                ToolTip="Actualizar la ciudad seleccionada"/>
+                        <Button Content="Eliminar" 
+                                Click="EliminarCiudad_Click"
+                                Background="Red"
+                                Foreground="White"
+                                Width="85"
+                                Height="32"
+                                FontSize="13"
+                                Margin="3"
+                                ToolTip="Eliminar la ciudad seleccionada"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Panel de Actividades Asociadas -->
+            <Border Grid.Column="1" 
+                    BorderBrush="Orange" 
+                    BorderThickness="2" 
+                    Background="LightYellow"
+                    Padding="10" 
+                    Margin="5">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <TextBlock Text="🎯" FontSize="16" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                        <Label Content="ACTIVIDADES DE LA CIUDAD" Foreground="DarkOrange" FontWeight="Bold" FontSize="14"/>
+                    </StackPanel>
+                    
+                    <ListBox x:Name="ListaActividadesAsociadas"
+                             DisplayMemberPath="nombre"
+                             SelectedValuePath="id"
+                             Height="400"
+                             Margin="0,5,0,10"
+                             ToolTip="Actividades asociadas a la ciudad seleccionada"/>
+                    
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0">
+                        <Button Content="Agregar" 
+                                Click="AgregarActividadCiudad_Click"
+                                Background="Orange"
+                                Foreground="White"
+                                Width="90"
+                                Height="32"
+                                FontSize="13"
+                                Margin="3"
+                                ToolTip="Asociar actividad seleccionada a la ciudad"/>
+                        <Button Content="Quitar" 
+                                Click="QuitarActividad_Click"
+                                Background="Red"
+                                Foreground="White"
+                                Width="90"
+                                Height="32"
+                                FontSize="13"
+                                Margin="3"
+                                ToolTip="Desasociar actividad de la ciudad"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Panel de Todas las Actividades con Filtros -->
+            <Border Grid.Column="2" 
+                    BorderBrush="Green" 
+                    BorderThickness="2" 
+                    Background="LightGreen"
+                    Padding="10" 
+                    Margin="5">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <TextBlock Text="🎨" FontSize="16" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                        <Label Content="TODAS LAS ACTIVIDADES" Foreground="DarkGreen" FontWeight="Bold" FontSize="14"/>
+                    </StackPanel>
+                    
+                    <!-- Filtros y Búsqueda -->
+                    <Label Content="Buscar:" FontSize="13" FontWeight="SemiBold"/>
+                    <TextBox x:Name="txtBusqueda" 
+                             Height="28"
+                             FontSize="13"
+                             Margin="0,3,0,5"
+                             TextChanged="txtBusqueda_TextChanged"
+                             ToolTip="Busca actividades por nombre, tipo o estado"/>
+                    
+                    <Label Content="Filtrar por Tipo:" FontSize="13" FontWeight="SemiBold" Margin="0,5,0,3"/>
+                    <ComboBox x:Name="cmbFiltroTipo"
+                              Height="28"
+                              FontSize="13"
+                              Margin="0,0,0,5"
+                              SelectionChanged="cmbFiltroTipo_SelectionChanged"
+                              ToolTip="Filtra actividades por tipo">
+                        <ComboBoxItem Content="Todos" IsSelected="True"/>
+                        <ComboBoxItem Content="Cultural"/>
+                        <ComboBoxItem Content="Recreativo"/>
+                        <ComboBoxItem Content="Gastronomía"/>
+                    </ComboBox>
+                    
+                    <Label Content="Filtrar por Estado:" FontSize="13" FontWeight="SemiBold" Margin="0,5,0,3"/>
+                    <ComboBox x:Name="cmbFiltroEstado"
+                              Height="28"
+                              FontSize="13"
+                              Margin="0,0,0,10"
+                              SelectionChanged="cmbFiltroEstado_SelectionChanged"
+                              ToolTip="Filtra actividades por estado">
+                        <ComboBoxItem Content="Todos" IsSelected="True"/>
+                        <ComboBoxItem Content="Disponible"/>
+                        <ComboBoxItem Content="No Disponible"/>
+                    </ComboBox>
+                    
+                    <ListBox x:Name="ListaActividades"
+                             SelectionChanged="ListaActividades_SelectionChanged"
+                             DisplayMemberPath="nombre"
+                             SelectedValuePath="id"
+                             Height="180"
+                             Margin="0,5,0,10"
+                             ToolTip="Selecciona una actividad para editar"/>
+                    
+                    <Label Content="Nombre:" FontSize="13"/>
+                    <TextBox x:Name="txtActividad" 
+                             Height="28"
+                             FontSize="13"
+                             Margin="0,3,0,5"
+                             ToolTip="Ingresa el nombre de la actividad"/>
+                    
+                    <Label Content="Precio:" FontSize="13"/>
+                    <TextBox x:Name="txtPrecio" 
+                             Height="28"
+                             FontSize="13"
+                             Margin="0,3,0,5"
+                             ToolTip="Ingresa el precio (número decimal)"/>
+                    
+                    <Label Content="Duración (minutos):" FontSize="13"/>
+                    <TextBox x:Name="txtDuracion" 
+                             Height="28"
+                             FontSize="13"
+                             Margin="0,3,0,5"
+                             ToolTip="Ingresa la duración en minutos (número entero)"/>
+                    
+                    <Label Content="Tipo:" FontSize="13"/>
+                    <ComboBox x:Name="cmbTipo"
+                              Height="28"
+                              FontSize="13"
+                              Margin="0,3,0,5"
+                              ToolTip="Selecciona el tipo de actividad">
+                        <ComboBoxItem Content="Cultural"/>
+                        <ComboBoxItem Content="Recreativo"/>
+                        <ComboBoxItem Content="Gastronomía"/>
+                    </ComboBox>
+                    
+                    <Label Content="Estado:" FontSize="13"/>
+                    <ComboBox x:Name="cmbEstado"
+                              Height="28"
+                              FontSize="13"
+                              Margin="0,3,0,10"
+                              ToolTip="Selecciona el estado de la actividad">
+                        <ComboBoxItem Content="Disponible"/>
+                        <ComboBoxItem Content="No Disponible"/>
+                    </ComboBox>
+                    
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0">
+                        <Button Content="Crear" 
+                                Click="AgregarActividad_Click"
+                                Background="Green"
+                                Foreground="White"
+                                Width="85"
+                                Height="32"
+                                FontSize="13"
+                                Margin="3"
+                                ToolTip="Crear una nueva actividad"/>
+                        <Button Content="Actualizar" 
+                                Click="ActualizarActividad_Click"
+                                Background="Blue"
+                                Foreground="White"
+                                Width="85"
+                                Height="32"
+                                FontSize="13"
+                                Margin="3"
+                                ToolTip="Actualizar la actividad seleccionada"/>
+                        <Button Content="Eliminar" 
+                                Click="EliminarActividad_Click"
+                                Background="Red"
+                                Foreground="White"
+                                Width="85"
+                                Height="32"
+                                FontSize="13"
+                                Margin="3"
+                                ToolTip="Eliminar la actividad seleccionada"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" 
+                Background="LightGray" 
+                BorderBrush="DarkGray" 
+                BorderThickness="1" 
+                Padding="5" 
+                Margin="0,10,0,0">
+            <TextBlock x:Name="txtEstado" 
+                       Text="Listo" 
+                       FontSize="12"
+                       Foreground="DarkSlateGray"/>
+        </Border>
+    </Grid>
+</Window>
