@@ -163,6 +163,7 @@ Cada panel incluye:
 - ComboBox para filtrar por estado
 - Los filtros se combinan automáticamente
   
+<img width="354" height="392" alt="image" src="https://github.com/user-attachments/assets/a2ac9cf5-6d84-4639-afb7-9124aee1cb44" />
 <img width="599" height="400" alt="image" src="https://github.com/user-attachments/assets/aa715429-4e5f-4e86-b730-208e515af3e9" />
 <img width="604" height="402" alt="image" src="https://github.com/user-attachments/assets/e6df3603-0017-406b-b9af-e1e69e6190a6" />
 <img width="596" height="393" alt="image" src="https://github.com/user-attachments/assets/a6f2b174-5636-4a2a-9d88-4db2c2290475" />
@@ -174,6 +175,13 @@ Cada panel incluye:
 - Mensajes de éxito al crear/actualizar
 - Validaciones antes de guardar
 - Actualización automática de listas
+
+<img width="1898" height="956" alt="image" src="https://github.com/user-attachments/assets/58fd87cb-ad01-4f20-9826-13502e519202" />
+<img width="1887" height="925" alt="image" src="https://github.com/user-attachments/assets/05523de6-3f75-4449-9a7c-d8de2dd5d1bf" />
+<img width="1891" height="928" alt="image" src="https://github.com/user-attachments/assets/bb93a47a-92bd-40dd-8d56-3cc1b0c054b5" />
+<img width="603" height="592" alt="image" src="https://github.com/user-attachments/assets/b4e2b103-9b63-4f19-bb55-95e2ad2f64c2" />
+<img width="1088" height="660" alt="image" src="https://github.com/user-attachments/assets/004faf99-a6d4-4fe9-8783-551ac18d6ca6" />
+
 
 ## Justificación del Diseño
 
