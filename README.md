@@ -142,6 +142,9 @@ La aplicación muestra tres paneles:
 - **Centro**: Actividades asociadas a la ciudad seleccionada
 - **Derecha**: Todas las actividades con filtros y búsqueda
 
+  <img width="1885" height="992" alt="image" src="https://github.com/user-attachments/assets/8761b817-637e-4a8b-876e-75d8592c4b9e" />
+
+
 ### Panel de Edición
 Cada panel incluye:
 - Campos de texto para nombre
