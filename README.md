@@ -151,12 +151,20 @@ Cada panel incluye:
 - Campos numéricos (población, precio, duración)
 - ComboBox para tipo y estado
 - Botones CRUD con iconos
+  <img width="599" height="324" alt="image" src="https://github.com/user-attachments/assets/f34d59d2-3932-4aff-983c-cc5ccbe46f90" />
+  <img width="601" height="376" alt="image" src="https://github.com/user-attachments/assets/dd601778-d311-4ee8-93b9-56654687e2b0" />
+
 
 ### Filtrado y Búsqueda
 - Barra de búsqueda en tiempo real
 - ComboBox para filtrar por tipo
 - ComboBox para filtrar por estado
 - Los filtros se combinan automáticamente
+  <img width="599" height="400" alt="image" src="https://github.com/user-attachments/assets/aa715429-4e5f-4e86-b730-208e515af3e9" />
+  <img width="604" height="402" alt="image" src="https://github.com/user-attachments/assets/e6df3603-0017-406b-b9af-e1e69e6190a6" />
+  <img width="596" height="393" alt="image" src="https://github.com/user-attachments/assets/a6f2b174-5636-4a2a-9d88-4db2c2290475" />
+
+
 
 ### CRUD en Funcionamiento
 - Mensajes de confirmación al eliminar
