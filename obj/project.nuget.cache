@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WVC7lqAOtvA=",
+  "dgSpecHash": "XDDxhbY2hM0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ezequ\\Ejemplo_Zoos\\ActividadesCiudad\\ActividadesCiudad.csproj",
+  "projectFilePath": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\ActividadesCiudad.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ezequ\\.nuget\\packages\\microsoft.data.sqlite\\10.0.0\\microsoft.data.sqlite.10.0.0.nupkg.sha512",
     "C:\\Users\\ezequ\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.0\\microsoft.data.sqlite.core.10.0.0.nupkg.sha512",

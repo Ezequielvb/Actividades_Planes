@@ -25,6 +25,7 @@ public partial class MainWindow : Window
     {
         try
         {
+            // Buscar BD en la raíz del proyecto (subir 3 niveles desde bin/Debug/net9.0-windows)
             string exeDir = AppDomain.CurrentDomain.BaseDirectory;
             string dbPath;
             
@@ -71,6 +72,7 @@ public partial class MainWindow : Window
             ", conn);
             cmd.ExecuteNonQuery();
 
+            // Migración: agregar columnas nuevas si la BD ya existía sin ellas
             try
             {
                 using var alterCmd = new SqliteCommand(@"
@@ -189,6 +191,7 @@ public partial class MainWindow : Window
             txtPrecio.Text = row["precio"]?.ToString() ?? string.Empty;
             txtDuracion.Text = row["duracion"]?.ToString() ?? string.Empty;
             
+            // Sincronizar ComboBox con el valor de la BD
             string? tipo = row["tipo"]?.ToString();
             foreach (ComboBoxItem item in cmbTipo.Items)
             {
@@ -233,6 +236,7 @@ public partial class MainWindow : Window
         try
         {
             string nombreCiudad = txtCiudad.Text.Trim();
+            // Campos opcionales: validar y convertir solo si tienen valor
             int? poblacion = null;
             if (!string.IsNullOrWhiteSpace(txtPoblacion.Text) && int.TryParse(txtPoblacion.Text, out int pop))
                 poblacion = pop;
@@ -363,6 +367,7 @@ public partial class MainWindow : Window
         {
             string nombreActividad = txtActividad.Text.Trim();
             
+            // Validar y convertir campos numéricos opcionales
             double? precio = null;
             if (!string.IsNullOrWhiteSpace(txtPrecio.Text) && double.TryParse(txtPrecio.Text, out double pr))
                 precio = pr;
@@ -371,6 +376,7 @@ public partial class MainWindow : Window
             if (!string.IsNullOrWhiteSpace(txtDuracion.Text) && int.TryParse(txtDuracion.Text, out int dur))
                 duracion = dur;
             
+            // Obtener valores de ComboBox (pueden ser null si no hay selección)
             string? tipo = (cmbTipo.SelectedItem as ComboBoxItem)?.Content?.ToString();
             string? estado = (cmbEstado.SelectedItem as ComboBoxItem)?.Content?.ToString();
             
@@ -520,6 +526,7 @@ public partial class MainWindow : Window
 
         try
         {
+            // Verificar que la actividad no esté ya asociada (evitar duplicados)
             var actividadesCiudad = db.ObtenerActividadesCiudad(ciudadId);
             foreach (DataRowView row in actividadesCiudad.DefaultView)
             {
@@ -609,12 +616,14 @@ public partial class MainWindow : Window
             string tipoFiltro = (cmbFiltroTipo.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Todos";
             string estadoFiltro = (cmbFiltroEstado.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Todos";
 
+            // Filtrar fila por fila: debe cumplir búsqueda Y tipo Y estado
             foreach (DataRow row in todasActividades.Rows)
             {
                 bool cumpleBusqueda = true;
                 bool cumpleTipo = true;
                 bool cumpleEstado = true;
 
+                // Búsqueda: busca en nombre, tipo o estado (case-insensitive)
                 if (!string.IsNullOrWhiteSpace(busqueda))
                 {
                     string busquedaLower = busqueda.ToLower();
@@ -627,18 +636,21 @@ public partial class MainWindow : Window
                                     estado.Contains(busquedaLower);
                 }
 
+                // Filtro por tipo: exacto
                 if (tipoFiltro != "Todos")
                 {
                     string tipoRow = row["tipo"]?.ToString() ?? "";
                     cumpleTipo = tipoRow == tipoFiltro;
                 }
 
+                // Filtro por estado: exacto
                 if (estadoFiltro != "Todos")
                 {
                     string estadoRow = row["estado"]?.ToString() ?? "";
                     cumpleEstado = estadoRow == estadoFiltro;
                 }
 
+                // Si cumple todos los criterios, agregar al resultado
                 if (cumpleBusqueda && cumpleTipo && cumpleEstado)
                 {
                     resultado.ImportRow(row);

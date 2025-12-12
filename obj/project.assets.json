@@ -345,11 +345,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ezequ\\Ejemplo_Zoos\\ActividadesCiudad\\ActividadesCiudad.csproj",
+      "projectUniqueName": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\ActividadesCiudad.csproj",
       "projectName": "ActividadesCiudad",
-      "projectPath": "C:\\Users\\ezequ\\Ejemplo_Zoos\\ActividadesCiudad\\ActividadesCiudad.csproj",
+      "projectPath": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\ActividadesCiudad.csproj",
       "packagesPath": "C:\\Users\\ezequ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ezequ\\Ejemplo_Zoos\\ActividadesCiudad\\obj\\",
+      "outputPath": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ezequ\\AppData\\Roaming\\NuGet\\NuGet.Config",

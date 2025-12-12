@@ -3,39 +3,39 @@
   "WorkspaceRootPath": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\Services\\DatabaseService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\DatabaseService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\App.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|c:\\users\\ezequ\\onedrive\\escritorio\\actividadesciudad\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|solutionrelative:services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\AppData\\Local\\Temp\\.vsdbgsrc\\b400e9847878a6d1a1f2ade84b3cf2fbf4e11cd682c9e24a66c3b3f5773c9c4b\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\ActividadesCiudad.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ActividadesCiudad.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|c:\\users\\ezequ\\onedrive\\escritorio\\actividadesciudad\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|c:\\users\\ezequ\\onedrive\\escritorio\\actividadesciudad\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|c:\\users\\ezequ\\onedrive\\escritorio\\actividadesciudad\\actividadesciudad.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|solutionrelative:actividadesciudad.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|c:\\users\\ezequ\\onedrive\\escritorio\\actividadesciudad\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|c:\\users\\ezequ\\onedrive\\escritorio\\actividadesciudad\\mainwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|solutionrelative:mainwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|c:\\users\\ezequ\\onedrive\\escritorio\\actividadesciudad\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|c:\\users\\ezequ\\onedrive\\escritorio\\actividadesciudad\\app.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B72C2681-CCE6-4B4C-A056-13939F662902}|ActividadesCiudad.csproj|solutionrelative:app.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,7 +55,7 @@
               "RelativeDocumentMoniker": "Services\\DatabaseService.cs",
               "ToolTip": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\Services\\DatabaseService.cs",
               "RelativeToolTip": "Services\\DatabaseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-12T19:09:21.15Z",
               "EditorCaption": ""
@@ -70,12 +70,11 @@
               "RelativeToolTip": "AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T19:09:08.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T19:09:08.822Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\ezequ\\AppData\\Local\\Temp\\.vsdbgsrc\\b400e9847878a6d1a1f2ade84b3cf2fbf4e11cd682c9e24a66c3b3f5773c9c4b\\XamlReader.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b400e9847878a6d1a1f2ade84b3cf2fbf4e11cd682c9e24a66c3b3f5773c9c4b\\XamlReader.cs",
@@ -88,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -96,12 +95,11 @@
               "RelativeToolTip": "README.md",
               "ViewState": "AgIAAH4AAAAAAAAAAAAAAL8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-12-12T18:13:58.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T18:13:58.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "ActividadesCiudad.csproj",
               "DocumentMoniker": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\ActividadesCiudad.csproj",
               "RelativeDocumentMoniker": "ActividadesCiudad.csproj",
@@ -113,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -125,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -133,12 +131,11 @@
               "RelativeToolTip": "MainWindow.xaml",
               "ViewState": "AgIAAOcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-07T23:14:49.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T23:14:49.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -146,12 +143,11 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T23:14:42.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T23:14:42.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\ezequ\\OneDrive\\Escritorio\\ActividadesCiudad\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ActividadesCiudad")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71338e0479668bd2bbc59ec3ec87bef96088a4b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+633a26d06aeff90ba3cb626d7117110b21545283")]
 [assembly: System.Reflection.AssemblyProductAttribute("ActividadesCiudad")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ActividadesCiudad")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

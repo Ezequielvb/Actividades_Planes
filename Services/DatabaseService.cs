@@ -9,6 +9,7 @@ public class DatabaseService
 {
     private static string GetDatabasePath()
     {
+        // Localizar BD en la raíz del proyecto (subir 3 niveles desde bin/Debug/net9.0-windows)
         string exeDir = AppDomain.CurrentDomain.BaseDirectory;
         
         if (exeDir.Contains("bin") && (exeDir.Contains("Debug") || exeDir.Contains("Release")))
